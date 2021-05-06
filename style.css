@@ -1,10 +1,128 @@
 .attribution {
   position: absolute;
-  bottom: 10px;
+  top: 10px;
   left: 10px;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --darkCyan: hsl(179, 100%, 13%);
+  --white: hsl(0, 0%, 95%);
+  --lightgray: hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.title {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  margin: 30px 0px;
+}
+.about {
+  color: var(--lightgray);
+  margin: 15px 0px;
+  line-height: 1.7em;
+}
+.button {
+  background-color: var(--white);
+  border: solid 2px var(--white);
+  border-radius: 30px;
+  padding: 13px 0px;
+  text-align: center;
+  width: 135px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 45px;
+  max-width: 250px;
+}
+.orange {
+  background-color: var(--orange);
+}
+.orange .button {
+  color: var(--orange);
+}
+.orange .button:hover {
+  background-color: var(--orange);
+  color: var(--lightgray);
+}
+.cyan {
+  background-color: var(--cyan);
+}
+.cyan .button {
+  color: var(--cyan);
+}
+.cyan .button:hover {
+  background-color: var(--cyan);
+  color: var(--lightgray);
+}
+.darkCyan {
+  background-color: var(--darkCyan);
+}
+.darkCyan .button {
+  color: var(--darkCyan);
+}
+.darkCyan .button:hover {
+  background-color: var(--darkCyan);
+  color: var(--lightgray);
+}
+@media only screen and (max-width: 600px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    margin: 75px 20px;
+  }
+  .card {
+    min-height: 350px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .orange {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .darkCyan {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+  .card {
+    min-height: 500px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .orange {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .darkCyan {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 }
